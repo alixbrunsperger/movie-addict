@@ -19,8 +19,6 @@ class MovieContainer extends Component {
   setMovie = movie => this.setState({movie});
 
   render() {
-
-    const { id } = this.props;
     const { movie } = this.state;
     return (
       <div className="movie-container">
@@ -36,8 +34,8 @@ class MovieContainer extends Component {
                 <div className="movie-info-title">{movie.title}</div>
                 <div className="movie-info-date">Release date: {movie.release_date}</div>
                 Actors:
-                {movie.credits && movie.credits.cast.slice(0, 4).map(actor =>
-                <div className="movie-info-actor"><b>{actor.name}</b> in the role of <b>{actor.character}</b></div>)}
+                {movie.credits && movie.credits.cast.slice(0, 4).map((actor, index) =>
+                <div className="movie-info-actor" key={index}><b>{actor.name}</b> in the role of <b>{actor.character}</b></div>)}
               </div>
               <div className="movie-info-actors">
                 <img src="/images/fake-elements/actors.png" />

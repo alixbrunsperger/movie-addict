@@ -11,7 +11,6 @@ class Results extends Component {
 
   componentDidMount = async () => {
     const { search } = window.location;
-    let query = "";
     if (search) {
       const query = search.split("=")[1];
       if(query){

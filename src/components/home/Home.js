@@ -1,7 +1,4 @@
 import React from 'react';
-import Header from '../common/Header';
-import SearchPopup from '../common/SearchPopup';
-import Home from './Home';
 
 export default () => (
       <div className="home">
