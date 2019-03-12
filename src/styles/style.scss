@@ -1,0 +1,326 @@
+$primary-color: #48539d;
+$alternate-color: #737373;
+
+$break-small: 320px;
+$break-middle: 600px;
+$break-large: 1025px;
+
+.home-container{
+  position: relative;
+}
+.main{
+  width: 968px;
+  @media (max-width: $break-small) {
+    width:100%;
+  }
+  margin: auto;
+}
+.header{
+  > *{
+    vertical-align: middle;
+  }
+
+}
+
+.logo{
+  display: inline-block;
+  width: 90%;
+  @media (max-width: $break-small) {
+    width: 75%;
+    float: none;
+  }
+  img{
+    width: 400px;
+    @media (max-width: $break-small) {
+      width: 75%;
+    }
+  }
+}
+
+.search{
+  width:10%;
+  display: inline-block;
+  text-align: center;
+  & .search-button{
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    img {
+      padding-top: 10px;
+      width: 30px;
+      pointer-events: none;
+    }
+  }
+}
+
+.search-popup{
+  top:0;
+  left:0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  &.active{
+    display:block;
+  }
+  img{
+    width:25px;
+    float:right;
+    margin: 10px 10px 0 0;
+  }
+  & .search-block{
+    background-color: white;
+    border: 1px solid black;
+    text-align:center;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    margin-top: 30%;
+    line-height: 200px;
+    font-size:35px;
+    @media (max-width: $break-small) {
+      width: 99%;
+    }
+
+    & input {
+      height: 43px;
+      padding:0;
+      margin:0;
+      border: 1px solid $alternate-color;
+      width: 200px;
+      @media (max-width: $break-small) {
+        width: 40%;
+      }
+    }
+    & input[type=text] {
+      padding-left: 15px;
+    }
+    & input[type=submit] {
+      background-color:$primary-color;
+      border-left: 0px;
+      color: white;
+      height: 45px;
+      width: 75px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+}
+
+.menu {
+  display: inline-block;
+  ul {
+list-style:none;
+margin-left:0;
+padding-left:0;
+border: 2px solid black;
+display: inline-block;
+}
+li {
+  padding: 0 15px;
+  @media (max-width: $break-small) {
+    padding: 0 4px;
+  }
+  &:not(:last-child) {
+    border-right: 3px solid black;
+  }
+  text-transform :uppercase;
+  font-weight: bold;
+  display: inline-block;
+  @media (max-width: $break-small) {
+    text-transform :none;
+    font-weight: normal;
+  }
+}
+
+}
+
+.home{
+  img{
+    display: block;
+    &.slideshow{
+      margin:auto;
+      width:800px;
+      @media (max-width: $break-small) {
+        width: 100%;
+      }
+    }
+    &.top3{
+      margin:auto;
+      width:870px;
+      @media (max-width: $break-small) {
+        width: 100%;
+      }
+    }
+    &.coming-soon{
+      vertical-align:top;
+      width:40%;
+      display:inline-block;
+      margin-left:10%;
+      @media (max-width: $break-small) {
+        width: 70%;
+      }
+    }
+    &.advanced-search{
+      width:30%;
+      margin: 0 10%;
+      display:inline-block;
+      @media (max-width: $break-small) {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.results-container{
+  @media (max-width: $break-middle) {
+    padding: 0 5%;
+  }
+}
+
+.result-header{
+  & .result-header-title{
+    font-weight: bold;
+    color: $alternate-color;
+    font-size: 30px;
+    line-height: 50px;
+  }
+  & .result-header-filter{
+    font-weight: bold;
+    margin-bottom: 25px;
+    & label{
+      display:inline-block;
+      width:130px;
+      font-weight: normal;
+    }
+  }
+}
+
+.result{
+  &:not(:last-child){
+    border-bottom: 2px solid $primary-color;
+  }
+  & .result-element{
+    padding: 5px 0;
+    & .result-element-picture {
+      display:inline-block;
+      width: 100px;
+      img{
+        width: 100px;
+      }
+    }
+    & .result-element-info{
+      vertical-align: top;
+      display:inline-block;
+      padding-left: 15px;
+      @media (max-width: $break-small) {
+        width: 50%;
+        font-size: 15px;
+      }
+      & .result-element-date{
+        display:inline-block;
+        width: 250px;
+        line-height: 30px;
+        @media (max-width: $break-small) {
+          line-height: normal;
+        }
+      }
+      & .result-element-note{
+        line-height: 30px;
+        @media (max-width: $break-small) {
+          line-height: normal;
+        }
+      }
+    }
+    & .result-element-title{
+      font-weight: bold;
+      line-height: 30px;
+      @media (max-width: $break-small) {
+        line-height: normal;
+      }
+      & a{
+        color:$primary-color;
+      }
+    }
+  }
+}
+
+.movie-element{
+  & .movie-trailer{
+    text-align: center;
+    margin-bottom: 25px;
+    & img{
+      @media (max-width: $break-small) {
+        width: 100%;
+      }
+    }
+  }
+  & .movie-info-text{
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 12%;
+    width:62%;
+    @media (max-width: $break-small) {
+      padding-left: 5%;
+      font-size: 15px;
+    }
+    & .movie-info-title{
+      font-weight: bold;
+      color: $primary-color;
+      font-size: 30px;
+      line-height: 50px;
+      @media (max-width: $break-small) {
+        font-size: 15px;
+        line-height: normal;
+      }
+    }
+    & .movie-info-date{
+      line-height: 30px;
+      @media (max-width: $break-small) {
+        font-size: 15px;
+        line-height: normal;
+      }
+    }
+    & .movie-info-actor{
+      @media (max-width: $break-small) {
+        font-size: 12px;
+        padding: 5px 0;
+      }
+    }
+  }
+  & .movie-info-actors{
+    display: inline-block;
+    @media (max-width: $break-small) {
+      width:30%;
+    }
+    & img{
+      @media (max-width: $break-small) {
+        width:100%;
+      }
+    }
+  }
+  & .movie-synopsis{
+    border-top: 2px solid $alternate-color;
+    border-bottom: 2px solid $alternate-color;
+    padding: 25px 10%;
+  }
+  & .movie-opinions{
+    padding: 25px 10%;
+    & .movie-opinion{
+      display:inline-block;
+      width:25%;
+      @media (max-width: $break-small) {
+        width:40%;
+      }
+    }
+  }
+  & .movie-similars{
+    border-top: 2px solid $alternate-color;
+    border-bottom: 2px solid $alternate-color;
+    padding: 25px 10%;
+  }
+}

@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchPopup is rendered 1`] = `
+<div
+  className="search-popup "
+>
+  <div
+    className="search-block"
+  >
+    <img
+      alt="close icon"
+      src="/images/cross.png"
+    />
+    <form
+      action="/results"
+    >
+      <input
+        name="query"
+        type="text"
+      />
+      <input
+        type="submit"
+        value="Search"
+      />
+    </form>
+  </div>
+</div>
+`;
+
+exports[`SearchPopup prop isPopupActive when isPopupActive is false is rendered 1`] = `
+<div
+  className="search-popup "
+>
+  <div
+    className="search-block"
+  >
+    <img
+      alt="close icon"
+      src="/images/cross.png"
+    />
+    <form
+      action="/results"
+    >
+      <input
+        name="query"
+        type="text"
+      />
+      <input
+        type="submit"
+        value="Search"
+      />
+    </form>
+  </div>
+</div>
+`;
+
+exports[`SearchPopup prop isPopupActive when isPopupActive is true is rendered 1`] = `
+<div
+  className="search-popup active"
+>
+  <div
+    className="search-block"
+  >
+    <img
+      alt="close icon"
+      src="/images/cross.png"
+    />
+    <form
+      action="/results"
+    >
+      <input
+        name="query"
+        type="text"
+      />
+      <input
+        type="submit"
+        value="Search"
+      />
+    </form>
+  </div>
+</div>
+`;
